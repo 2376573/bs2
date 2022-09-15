@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="89c26914-0686-443d-a7d2-6ec1c353626e" name="111" url="http://a2376573.dothome.co.kr/bs2">
+        <fileTransfer rootFolder="/html/bs2" host="a2376573.dothome.co.kr" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
