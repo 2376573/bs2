@@ -42,7 +42,7 @@ session_start();
                 </button>
                 <script>
                     function pw(){
-                            alert("로그인 해주세요");
+                        alert("로그인 해주세요");
                     }
                 </script>
             <div class="float-end">
@@ -149,9 +149,7 @@ session_start();
                                         <input class="form-control" type="password" name="userpw" maxlength="20" required>
                                     </div>
                                     <div class="mb-3">
-                                        <textarea class="form-control" name="txt" required>
-
-                                        </textarea>
+                                        <textarea class="form-control" name="txt" required></textarea>
                                         <script>
                                             ClassicEditor
                                                 .create( document.querySelector( 'textarea' ), {
