@@ -36,35 +36,31 @@ session_start();
 <!--ckeditor-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor5/34.1.0/ckeditor.min.js" integrity="sha512-RvP4YtcpRcd5+PFgOCIEat6eHD2mAjflHdzpfTJc2giz2FsmDETkM1DZO6EkwUWj1nZySTR2fm22GZq9nlo5Rg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <div class="container">
-        <div>
-            total : <?=$cnt?>
-        </div>
         <div class="">
-            <div>
-                <button type="button" class="btn btn-primary" onclick="pw()" <?php if(isset($_SESSION['userid'])){?> data-bs-toggle="modal" data-bs-target="#exampleModal" <?php }?>id="bt" >
+                <button type="button" class="btn btn-primary" <?php if(isset($_SESSION['userid'])){?> data-bs-toggle="modal" data-bs-target="#exampleModal" <?php } else {?> onclick="pw()" <?php } ?> id="bt" >
                     <i class="fa-solid fa-pen"></i> 글쓰기
                 </button>
                 <script>
                     function pw(){
-                        if(<?=!isset($_SESSION['userid'])?>){
                             alert("로그인 해주세요");
-                        }
                     }
                 </script>
+            <div class="float-end">
                 <?php
                 if(!isset($_SESSION['userid'])){
                     ?>
-                <button type="button" class="btn btn-primary ms-1"  onclick="location.href='login.php'">
-                    <i class="fa-solid fa-pen"></i> 로그인
-                </button>
-                <button type="button" class="btn btn-primary ms-1" onclick="location.href='signup.php'">
-                    <i class="fa-solid fa-pen"></i> 회원가입
-                </button>
+                    <button type="button" class="btn btn-primary ms-1"  onclick="location.href='login.php'">
+                        <i class="fa-solid fa-user"></i> 로그인
+                    </button>
+                    <button type="button" class="btn btn-primary ms-1" onclick="location.href='signup.php'">
+                        회원가입
+                    </button>
                 <?php } else {?>
-                    <button type="button" class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#logout">
-                        <i class="fa-solid fa-pen"></i> 로그아웃
+                    <button type="button" class="btn btn-danger ms-1" data-bs-toggle="modal" data-bs-target="#logout">
+                         로그아웃
                     </button>
                 <?php } ?>
+            </div>
                 <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
                     <div class=" col-md-6">
                         <div class="input-group">

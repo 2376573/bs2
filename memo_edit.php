@@ -8,7 +8,7 @@ if(!$_GET['idx']){
     exit();
 }
 require_once "connect.php";
-$query = "select * from memo where idx = '{$_GET['idx']}'";
+$query = "select * from memo2 where idx = '{$_GET['idx']}'";
 $result = $connect -> query($query) -> fetch_all(1);
 $res = $result[0];
 session_start();
@@ -30,22 +30,20 @@ session_start();
     <div class="modal-body">
         <div class="">
             <div class="mb-3">
-                <label >이름</label>
-                <input class="form-control" type="text" name="username" maxlength="20" value = "<?=$res['username']?>"required>
+                <label>이름</label>
+                <input class="form-control bg-white" type="text" name="username" maxlength="20" value="<?=$res['username']?>"readonly>
             </div>
             <div class="mb-3">
                 <label >비밀번호</label>
                 <input class="form-control" type="password" name="userpw" maxlength="20" required>
             </div>
             <div class="mb-3">
-                <textarea class="form-control" name="txt" required>
-                    <?=$res['txt']?>
-                </textarea>
+                <textarea class="form-control" type="text" name="txt" required><?=strip_tags($res['txt'])?></textarea>
             </div>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">저장하기</button>
-    <input type = "hidden" name = "idx" value="<?=$_GET['idx']?>">
+    <input type="hidden" name="idx" value="<?=$_GET['idx']?>">
 </form>
 </div>
 </body>
