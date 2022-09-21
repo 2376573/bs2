@@ -1,3 +1,4 @@
+<!--connect할 서버 지정-->
 <?php
 if($_SERVER['HTTP_HOST'] == "a2376573.dothome.co.kr"){
     $host = "localhost";

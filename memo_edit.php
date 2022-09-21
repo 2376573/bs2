@@ -1,3 +1,5 @@
+<!--수정 페이지-->
+<!--인덱스 정보가 없을 경우-->
 <?php
 if(!$_GET['idx']){
     ?>
@@ -7,6 +9,7 @@ if(!$_GET['idx']){
     <?php
     exit();
 }
+//인덱스 정보가 있을 경우
 require_once "connect.php";
 $query = "select * from memo2 where idx = '{$_GET['idx']}'";
 $result = $connect -> query($query) -> fetch_all(1);
@@ -26,6 +29,7 @@ session_start();
 <body>
 <script src = "js/bootstrap.bundle.min.js"></script>
 <div class="container">
+<!--기존값 수정-->
 <form action="memo_edit_ok.php" method="post">
     <div class="modal-body">
         <div class="">

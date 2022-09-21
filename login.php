@@ -1,5 +1,6 @@
 <?php require_once "header.php";
 ?>
+<!--로그인 하는 창 생성-->
 <div class="container">
     <form action="login_ok.php" method="post">
         <div>

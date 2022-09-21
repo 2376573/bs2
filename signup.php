@@ -1,3 +1,4 @@
+<!--회원가입 페이지-->
 <?php
 require_once "header.php";
 ?>

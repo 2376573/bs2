@@ -1,3 +1,4 @@
+<!--데이터베이스에서 수정-->
 <?php
 require_once "connect.php";
 
@@ -6,8 +7,10 @@ $connect->query($query);
 $result = $connect -> affected_rows;
 ?>
 <script>
-    <?php 
+    <?php
+        //수정 성공시
         if($result) echo "alert('수정완료'); location.href = 'memo.php'";
+        //수정 실패시
         else echo "alert('비밀번호가 일치하지 않습니다'); location.href = 'memo.php'";
     ?>
 </script>

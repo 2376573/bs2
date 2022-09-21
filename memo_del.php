@@ -1,3 +1,6 @@
+
+<!--삭제 페이지-->
+<!--인덱스 정보를 가지고 들어왔을 경우-->
 <?php if($_GET['idx']){?>
 <!doctype html>
 <html lang="en">
@@ -10,6 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+<!--삭제 클릭-->
 <form action="memo_del_ok.php" method="post">
     <div class="container">
         <div class="">
@@ -34,7 +38,9 @@
 
 </body>
 </html>
+    <!--인덱스 정보가 없을 경우-->
 <?php } else {?>
+        
     <script>
         alert("해킹하지마세요");
         location.href="memo.php";
