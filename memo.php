@@ -6,7 +6,7 @@ $page = $_GET['page']??1;
 //한 페이지당 최대 게시물 개수
 $rows = 10;
 
-//자신이 위치하고 있는 페이지가 4라면 30부터 10개 표시
+//자신이 위치하고 있는 페이지가 4라면 게시물의 30번째 부터 10개 표시
 $now = ($page - 1) * $rows;
 
 //검색 내용이 있다면 검색한 정보만 가져오기
@@ -224,7 +224,7 @@ $last = min($start + 9, $pages);
                 ?>
                     <!-- pagination 리스트 생성 -->
                 <li class="page-item <?=$active?>">
-                    <a class="page-link" href="<?=$url?>/bs/memo.php?page=<?=$i?><?=$search?>"><?=$i?></a>
+                    <a class="page-link" href="<?=$url?>/bs2/memo.php?page=<?=$i?><?=$search?>"><?=$i?></a>
                 </li>
                 <?php
             }
