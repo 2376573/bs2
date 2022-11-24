@@ -164,7 +164,7 @@ session_start();
                         <div class="">
                             <div class="mb-3">
                                 <label>이름</label>
-                                <input class="form-control" type="text" name="username" maxlength="20" value="<?=$_SESSION['username']?>" disabled>
+                                <input class="form-control bg-white" type="text" name="username" maxlength="20" value="<?=$_SESSION['username']?>">
                             </div>
                             <div class="mb-3">
                                 <label>비밀번호</label>
@@ -193,7 +193,7 @@ session_start();
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                        <button class="btn btn-primary" type="submit">저장하기</button>
+                        <button class="btn btn-primary" onclick="form.submit()">저장하기</button>
                     </div>
                 </form>
             </div>
