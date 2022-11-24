@@ -1,7 +1,7 @@
 <?php
 require_once "connect.php";
 //데이터베이스에서 삭제
-$query = "delete from memo2 where idx = '{$_POST['idx']}' and userpw = '{$_POST['pw']}'";
+$query = "delete from memo2 where idx = '{$_POST['idx']}' and userpw = sha1('{$_POST['pw']}')";
 $connect -> query($query);
 $res = $connect ->affected_rows;
 echo $query;
